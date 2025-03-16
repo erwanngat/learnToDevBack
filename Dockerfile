@@ -15,7 +15,8 @@ RUN apt-get update && apt-get install -y \
     unzip \
     nodejs \
     npm \
-    postgresql-client
+    postgresql-client \
+    libpq-dev
 
 # Installer les extensions PHP nécessaires
 RUN docker-php-ext-install pdo pdo_pgsql
