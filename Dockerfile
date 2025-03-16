@@ -39,9 +39,6 @@ RUN npm install && npm run build
 RUN chown -R www-data:www-data /var/www/html/storage /var/www/html/bootstrap/cache
 RUN chmod -R 775 /var/www/html/storage /var/www/html/bootstrap/cache
 
-# Copier la config Apache (si nécessaire)
-COPY apache-default.conf /etc/apache2/sites-available/000-default.conf
-
 # Exposer le port 80
 EXPOSE 80
 
